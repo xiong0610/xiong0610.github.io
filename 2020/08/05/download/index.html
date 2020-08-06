@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="Download, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>Download | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Download</h1>
                 </div>
             </div>
         </div>
@@ -428,9 +428,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/download/">
+                                <span class="chip bg-color">download</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -442,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-06
+                    2020-08-05
                 </div>
                 
 
@@ -458,19 +466,78 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p><a target="_blank" rel="noopener" href="https://vdept.bdstatic.com/3172514469746e505374655578473149/6247436962576c65/cbb8b61ca324c45ffd8705b023ba79ac419d6e84d0a94a3a340985a83f3d16273a658ee10cbe0ba2f69e52266ad16c1b.mp4?auth_key=1596605510-0-0-02ae39b732a12c7c7dcb84c5f1acb92d">万爱千恩(沙画版)</a></p>
+<pre><code>###java demo
+package com.down;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+/**
+ * @author 作者: xiaoyu
+ * @version 创建时间: 2020年8月5日 上午12:33:58
+ * @description
+ */
+public class Download &#123;
+    public static void main(String[] args) &#123;
+        String url = &quot;https://vdept.bdstatic.com/3172514469746e505374655578473149/6247436962576c65/cbb8b61ca324c45ffd8705b023ba79ac419d6e84d0a94a3a340985a83f3d16273a658ee10cbe0ba2f69e52266ad16c1b.mp4?auth_key=1596605510-0-0-02ae39b732a12c7c7dcb84c5f1acb92d&quot;;
+        String path = &quot;d:/test.mp4&quot;;
+        boolean bool = httpDownload(url, path);
+        System.out.println(bool);
+    &#125;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+    /**
+     * 下载文件(视频)类
+     * 
+     * @author xiaoyu
+     * @Date 2020年8月5日 下午12:43:35
+     *
+     * @param httpUrl 源网络文件的地址
+     * @param path    保存文件的路径(带后缀)
+     * @return
+     */
+    public static boolean httpDownload(String httpUrl, String path) &#123;
+        // 1.下载网络文件
+        int byteRead;
+        URL url;
+        try &#123;
+            url = new URL(httpUrl);
+        &#125; catch (MalformedURLException e1) &#123;
+            e1.printStackTrace();
+            return false;
+        &#125;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        try &#123;
+            // 2.获取链接
+            URLConnection conn = url.openConnection();
+            // 3.输入流
+            InputStream inStream = conn.getInputStream();
+            // 3.写入文件
+            OutputStream fs = new FileOutputStream(new File(path));
+
+            byte[] buffer = new byte[1024];
+            while ((byteRead = inStream.read(buffer)) != -1) &#123;
+                fs.write(buffer, 0, byteRead);
+            &#125;
+            inStream.close();
+            fs.close();
+            return true;
+        &#125; catch (FileNotFoundException e) &#123;
+            e.printStackTrace();
+            return false;
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+            return false;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
             </div>
             <hr/>
@@ -496,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/06/hello-world/">http://yoursite.com/2020/08/06/hello-world/</a>
+                    <a href="http://yoursite.com/2020/08/05/download/">http://yoursite.com/2020/08/05/download/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,7 +600,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/download/">
+                                    <span class="chip bg-color">download</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -699,10 +774,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2020/08/06/hello-world/">
                     <div class="card-image">
@@ -720,9 +794,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -731,7 +805,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -739,7 +812,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="/2020/08/05/download/">
@@ -775,6 +848,7 @@ import java.io.File
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
