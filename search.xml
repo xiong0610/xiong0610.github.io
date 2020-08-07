@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/08/06/hello-world/"/>
+      <url>/2020/08/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Download</title>
+      <link href="/2020/08/05/download/"/>
+      <url>/2020/08/05/download/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://vdept.bdstatic.com/3172514469746e505374655578473149/6247436962576c65/cbb8b61ca324c45ffd8705b023ba79ac419d6e84d0a94a3a340985a83f3d16273a658ee10cbe0ba2f69e52266ad16c1b.mp4?auth_key=1596605510-0-0-02ae39b732a12c7c7dcb84c5f1acb92d">万爱千恩(沙画版)</a></p><pre><code>###java demopackage com.down;import java.io.File;import java.io.FileNotFoundException;import java.io.FileOutputStream;import java.io.IOException;import java.io.InputStream;import java.io.OutputStream;import java.net.MalformedURLException;import java.net.URL;import java.net.URLConnection;/** * @author 作者: xiaoyu * @version 创建时间: 2020年8月5日 上午12:33:58 * @description */public class Download &#123;    public static void main(String[] args) &#123;        String url = &quot;https://vdept.bdstatic.com/3172514469746e505374655578473149/6247436962576c65/cbb8b61ca324c45ffd8705b023ba79ac419d6e84d0a94a3a340985a83f3d16273a658ee10cbe0ba2f69e52266ad16c1b.mp4?auth_key=1596605510-0-0-02ae39b732a12c7c7dcb84c5f1acb92d&quot;;        String path = &quot;d:/test.mp4&quot;;        boolean bool = httpDownload(url, path);        System.out.println(bool);    &#125;    /**     * 下载文件(视频)类     *      * @author xiaoyu     * @Date 2020年8月5日 下午12:43:35     *     * @param httpUrl 源网络文件的地址     * @param path    保存文件的路径(带后缀)     * @return     */    public static boolean httpDownload(String httpUrl, String path) &#123;        // 1.下载网络文件        int byteRead;        URL url;        try &#123;            url = new URL(httpUrl);        &#125; catch (MalformedURLException e1) &#123;            e1.printStackTrace();            return false;        &#125;        try &#123;            // 2.获取链接            URLConnection conn = url.openConnection();            // 3.输入流            InputStream inStream = conn.getInputStream();            // 3.写入文件            OutputStream fs = new FileOutputStream(new File(path));            byte[] buffer = new byte[1024];            while ((byteRead = inStream.read(buffer)) != -1) &#123;                fs.write(buffer, 0, byteRead);            &#125;            inStream.close();            fs.close();            return true;        &#125; catch (FileNotFoundException e) &#123;            e.printStackTrace();            return false;        &#125; catch (IOException e) &#123;            e.printStackTrace();            return false;        &#125;    &#125;&#125;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> download </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
