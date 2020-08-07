@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>采集网站的content</title>
+      <link href="/2020/08/06/collect/"/>
+      <url>/2020/08/06/collect/</url>
+      
+        <content type="html"><![CDATA[<pre><code>###java demopackage com.example;import java.io.BufferedReader;import java.io.BufferedWriter;import java.io.File;import java.io.FileNotFoundException;import java.io.FileWriter;import java.io.IOException;import java.io.InputStream;import java.io.InputStreamReader;import java.net.HttpURLConnection;import java.net.URL;import java.util.HashMap;import java.util.Map;import org.apache.commons.codec.digest.DigestUtils;/** * @author 作者: xiaoyu * @version 创建时间: 2020年8月6日 下午7:11:01 * @description */public class Gold {    static Map&lt;String, String&gt; map = new HashMap&lt;String, String&gt;();    public static void main(String[] args) {        String path = "d:/gold.txt";        File file = new File(path);        if (!file.exists()) {            System.out.println(path + "路径不存在");            System.exit(0);        }        FileWriter out = null;        BufferedWriter w = null;        try {            String result = "";            for (int i = 0; i &lt; 100; i++) {                out = new FileWriter(file, true);// true 追加写 默认false                w = new BufferedWriter(out, 1024);                String temp = getGold();                if (!"".equals(temp)) {                    String key = getMD5(temp);                    //判断key是否存在,目的是不会写入重复的内容                    boolean exist = isExist(key);                    if (exist) {                        i--;                        continue;                    } else {                        map.put(key, temp);                        result = (i + 1) + ",";                        result += temp + "\n";                        w.write(result);                        w.flush();// 刷新缓存区                        System.out.println((i + 1) + "完成。。。" + result);                    }                } else {                    i--; // 保持序号递增                }            }        } catch (FileNotFoundException e) {            System.out.println(path + "路径不存在");        } catch (IOException e) {            System.out.println("写入错误");        }    }    /**     * 获取gold     *      * @author xiaoyu     * @Date 2020年8月6日 下午7:27:42     *     * @return     */    public static String getGold() {        HttpURLConnection connection = null;        InputStream inputStream = null;        BufferedReader reader = null;        try {            String url = "https://tool.lu/hexconvert/";            byte[] bytes = url.getBytes();            URL u = new URL(new String(bytes, "utf-8"));            connection = (HttpURLConnection) u.openConnection();            connection.connect();            // 创建网络读取流            inputStream = connection.getInputStream();            reader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));            // 4、读取网络内容网络流BufferReader            String s = "";            String line = null;            while ((line = reader.readLine()) != null) {                line = line.trim().replace(" ", "");                if (line.endsWith("。&lt;/div&gt;")) {                    s += line.replace("。&lt;/div&gt;", "。");                }                continue;            }            return s;        } catch (Exception e) {            return null;        } finally {            try {                reader.close();                inputStream.close();            } catch (IOException e) {                return null;            }        }    }    /**     * 获取md5值     *      * @author xiaoyu     * @Date 2020年8月6日 下午8:01:49     *     * @param context     * @return     */    public static String getMD5(String context) {        String md5Str = DigestUtils.md5Hex(context);        return md5Str;    }    /**     * 判断key是否存在     *      * @author xiaoyu     * @Date 2020年8月6日 下午8:09:17     *     * @param key     * @return     */    public static boolean isExist(String key) {        for (String item : map.keySet()) {            if (key.equals(item)) {                return true;            }        }        return false;    }}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> collect </tag>
+            
+            <tag> 原创 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/08/06/hello-world/"/>
       <url>/2020/08/06/hello-world/</url>
@@ -17,7 +40,7 @@
     
     
     <entry>
-      <title>Download</title>
+      <title>下载网络文件的Demo</title>
       <link href="/2020/08/05/download/"/>
       <url>/2020/08/05/download/</url>
       
@@ -29,7 +52,9 @@
             
             <tag> java </tag>
             
-            <tag> download </tag>
+            <tag> collect </tag>
+            
+            <tag> 原创 </tag>
             
         </tags>
       

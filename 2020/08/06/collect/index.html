@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 你的晚安，只是想让我闭嘴。">
+    <meta name="keywords" content="采集网站的content, 你的晚安，只是想让我闭嘴。">
     <meta name="description" content="面包会有的,牛奶会有的,你想要的一切都会有的。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | memory</title>
+    <title>采集网站的content | memory</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,7 +313,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">采集网站的content</h1>
                 </div>
             </div>
         </div>
@@ -428,9 +428,21 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/collect/">
+                                <span class="chip bg-color">collect</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                                <span class="chip bg-color">原创</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -449,21 +461,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-06
+                    2020-08-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    510
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -478,20 +490,170 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <pre><code>###java demo
+package com.example;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+import org.apache.commons.codec.digest.DigestUtils;
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+/**
+ * @author 作者: xiaoyu
+ * @version 创建时间: 2020年8月6日 下午7:11:01
+ * @description
+ */
+public class Gold {
+    static Map&lt;String, String&gt; map = new HashMap&lt;String, String&gt;();
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    public static void main(String[] args) {
+        String path = "d:/gold.txt";
+        File file = new File(path);
+        if (!file.exists()) {
+            System.out.println(path + "路径不存在");
+            System.exit(0);
+        }
+        FileWriter out = null;
+        BufferedWriter w = null;
+        try {
+            String result = "";
+            for (int i = 0; i &lt; 100; i++) {
+                out = new FileWriter(file, true);// true 追加写 默认false
+                w = new BufferedWriter(out, 1024);
+                String temp = getGold();
+                if (!"".equals(temp)) {
 
+                    String key = getMD5(temp);
+                    //判断key是否存在,目的是不会写入重复的内容
+                    boolean exist = isExist(key);
+                    if (exist) {
+                        i--;
+                        continue;
+                    } else {
+                        map.put(key, temp);
+                        result = (i + 1) + ",";
+                        result += temp + "\n";
+                        w.write(result);
+                        w.flush();// 刷新缓存区
+                        System.out.println((i + 1) + "完成。。。" + result);
+                    }
+                } else {
+                    i--; // 保持序号递增
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(path + "路径不存在");
+        } catch (IOException e) {
+            System.out.println("写入错误");
+        }
+
+    }
+
+    /**
+     * 获取gold
+     * 
+     * @author xiaoyu
+     * @Date 2020年8月6日 下午7:27:42
+     *
+     * @return
+     */
+    public static String getGold() {
+        HttpURLConnection connection = null;
+        InputStream inputStream = null;
+        BufferedReader reader = null;
+        try {
+            String url = "https://tool.lu/hexconvert/";
+            byte[] bytes = url.getBytes();
+            URL u = new URL(new String(bytes, "utf-8"));
+            connection = (HttpURLConnection) u.openConnection();
+            connection.connect();
+            // 创建网络读取流
+            inputStream = connection.getInputStream();
+            reader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
+            // 4、读取网络内容网络流BufferReader
+            String s = "";
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                line = line.trim().replace(" ", "");
+                if (line.endsWith("。&lt;/div&gt;")) {
+                    s += line.replace("。&lt;/div&gt;", "。");
+                }
+                continue;
+            }
+            return s;
+        } catch (Exception e) {
+            return null;
+        } finally {
+            try {
+                reader.close();
+                inputStream.close();
+            } catch (IOException e) {
+                return null;
+            }
+        }
+    }
+
+    /**
+     * 获取md5值
+     * 
+     * @author xiaoyu
+     * @Date 2020年8月6日 下午8:01:49
+     *
+     * @param context
+     * @return
+     */
+    public static String getMD5(String context) {
+        String md5Str = DigestUtils.md5Hex(context);
+        return md5Str;
+    }
+
+    /**
+     * 判断key是否存在
+     * 
+     * @author xiaoyu
+     * @Date 2020年8月6日 下午8:09:17
+     *
+     * @param key
+     * @return
+     */
+    public static boolean isExist(String key) {
+        for (String item : map.keySet()) {
+            if (key.equals(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -516,7 +678,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiong0610.github.io/2020/08/06/hello-world/">https://xiong0610.github.io/2020/08/06/hello-world/</a>
+                    <a href="https://xiong0610.github.io/2020/08/06/collect/">https://xiong0610.github.io/2020/08/06/collect/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,7 +715,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/collect/">
+                                    <span class="chip bg-color">collect</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                                    <span class="chip bg-color">原创</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -722,7 +896,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-08-06T11-04-11',
+        id: '2020-08-06T12-34-47',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -746,7 +920,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Thu Aug 06 2020 11:04:11 GMT+0800',
+    id: 'Thu Aug 06 2020 12:34:47 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -773,9 +947,10 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/06/collect/">
                     <div class="card-image">
@@ -799,9 +974,9 @@ im
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -810,6 +985,7 @@ im
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -836,30 +1012,24 @@ im
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/05/download/">
+                <a href="/2020/08/06/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="下载网络文件的Demo">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">下载网络文件的Demo</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《冬天的秘密mv》- (周传雄)
-###java demo
-package com.down;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
                             </span>
                         <span class="publish-author">
                             
@@ -868,22 +1038,6 @@ import java.
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/collect/">
-                        <span class="chip bg-color">collect</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
-                        <span class="chip bg-color">原创</span>
-                    </a>
-                    
                 </div>
                 
             </div>
