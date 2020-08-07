@@ -457,14 +457,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-06
+                    2020-08-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    266
+                    296
                 </div>
                 
 
@@ -486,7 +486,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://vdept.bdstatic.com/3172514469746e505374655578473149/6247436962576c65/cbb8b61ca324c45ffd8705b023ba79ac419d6e84d0a94a3a340985a83f3d16273a658ee10cbe0ba2f69e52266ad16c1b.mp4?auth_key=1596605510-0-0-02ae39b732a12c7c7dcb84c5f1acb92d">万爱千恩(沙画版)</a></p>
+                <p><a target="_blank" rel="noopener" href="https://vdse.bdstatic.com/b5f6fd9d2fac4a8f8d87b8b4c8b4ca0f.mp4">《冬天的秘密mv》- (周传雄)</a></p>
 <pre><code>###java demo
 package com.down;
 
@@ -505,13 +505,13 @@ import java.net.URLConnection;
  * @version 创建时间: 2020年8月5日 上午12:33:58
  * @description
  */
-public class Download &#123;
-    public static void main(String[] args) &#123;
-        String url = &quot;https://vdept.bdstatic.com/3172514469746e505374655578473149/6247436962576c65/cbb8b61ca324c45ffd8705b023ba79ac419d6e84d0a94a3a340985a83f3d16273a658ee10cbe0ba2f69e52266ad16c1b.mp4?auth_key=1596605510-0-0-02ae39b732a12c7c7dcb84c5f1acb92d&quot;;
-        String path = &quot;d:/test.mp4&quot;;
+public class Download {
+    public static void main(String[] args) {
+        String url = "https://vdse.bdstatic.com/b5f6fd9d2fac4a8f8d87b8b4c8b4ca0f.mp4";
+        String path = "d:/冬天的秘密mv.mp4";
         boolean bool = httpDownload(url, path);
         System.out.println(bool);
-    &#125;
+    }
 
     /**
      * 下载文件(视频)类
@@ -523,18 +523,18 @@ public class Download &#123;
      * @param path    保存文件的路径(带后缀)
      * @return
      */
-    public static boolean httpDownload(String httpUrl, String path) &#123;
+    public static boolean httpDownload(String httpUrl, String path) {
         // 1.下载网络文件
         int byteRead;
         URL url;
-        try &#123;
+        try {
             url = new URL(httpUrl);
-        &#125; catch (MalformedURLException e1) &#123;
+        } catch (MalformedURLException e1) {
             e1.printStackTrace();
             return false;
-        &#125;
+        }
 
-        try &#123;
+        try {
             // 2.获取链接
             URLConnection conn = url.openConnection();
             // 3.输入流
@@ -543,22 +543,40 @@ public class Download &#123;
             OutputStream fs = new FileOutputStream(new File(path));
 
             byte[] buffer = new byte[1024];
-            while ((byteRead = inStream.read(buffer)) != -1) &#123;
+            while ((byteRead = inStream.read(buffer)) != -1) {
                 fs.write(buffer, 0, byteRead);
-            &#125;
+            }
             inStream.close();
             fs.close();
             return true;
-        &#125; catch (FileNotFoundException e) &#123;
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
             return false;
-        &#125; catch (IOException e) &#123;
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
-        &#125;
-    &#125;
-&#125;</code></pre>
-
+        }
+    }
+}</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -901,13 +919,13 @@ gitment.render('gitment-content');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            万爱千恩(沙画版)
+                            《冬天的秘密mv》- (周传雄)
 ###java demo
 package com.down;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.File
+import java.
                         
                     </div>
                     <div class="publish-info">
