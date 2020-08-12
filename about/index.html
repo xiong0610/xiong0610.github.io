@@ -368,10 +368,15 @@
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">2</a></span>
+    <span class="name">分类</span>
+</div>
+
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">3</a></span>
+    <span class="count"><a href="/tags">5</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -393,10 +398,15 @@
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">2</a></span>
+    <span class="name">分类</span>
+</div>
+
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">3</a></span>
+    <span class="count"><a href="/tags">5</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -582,7 +592,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"javase","value":2},{"name":"后端","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -606,7 +616,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["java","collect","原创"]
+                data: ["java","collect","原创","io","HelloWorld"]
             }
         ],
         yAxis: [
@@ -619,7 +629,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [2,2,2],
+                data: [2,2,2,2,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -803,6 +813,18 @@
             
             <a href="/tags/%E5%8E%9F%E5%88%9B/">
                 <span class="chip center-align waves-effect waves-light chip-default">原创</span>
+            </a>
+            
+            
+            
+            <a href="/tags/io/">
+                <span class="chip center-align waves-effect waves-light chip-default">io</span>
+            </a>
+            
+            
+            
+            <a href="/tags/HelloWorld/">
+                <span class="chip center-align waves-effect waves-light chip-default">HelloWorld</span>
             </a>
             
             
